@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="scanlines"></div>
+
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="title">root@mainframe: ~/hack</div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+            <p class="line">System booting...</p>
+            <p class="line">Loading modules... OK.</p>
+            <p class="line">Connection established.</p>
+            <p class="line highlight">Awaiting user input.</p>
+            <p class="line">
+                <span class="prompt">root@hack:~#</span>
+                <span id="typed-text"></span>
+                <span class="cursor" id="cursor">_</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="control-panel">
+        <button id="hack-btn" class="glitch-btn" data-text="INITIATE HACK">INITIATE HACK</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
